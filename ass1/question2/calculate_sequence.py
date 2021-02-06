@@ -18,7 +18,21 @@ def seq2(x0, N, c):
 N = 20
 Ns = [x+1 for x in range(N)]
 
-#plt.plot(Ns, list(seq1(1, N)))
-for c in cs:
-plt.plot(Ns, list(seq2(.4, N, cs[0])))
-plt.show()
+def plot_seq1():
+  plt.plot(Ns, list(seq1(1, N)))
+  plt.title(r'Behaviour of $\frac{2x^3+5}{3x^2}$')
+  plt.xlabel("k")
+  plt.ylabel("$x^{(k)}$")
+  plt.show()
+
+#plot_seq1()
+def plot_seq2():
+  plt.title(r'Behaviour of logistic equation')
+  for c in cs:
+    plt.plot(Ns, list(seq2(.1, N, c)))
+  plt.xlabel('k')
+  plt.ylabel('$x^{(k)}$')
+  plt.legend(title='c values', labels=cs)
+  plt.show()
+
+plot_seq2()
