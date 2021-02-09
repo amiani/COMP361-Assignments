@@ -7,6 +7,7 @@
 
 % As we usually want to include some plots (.pdf files) we need a package for that.
 \usepackage{graphicx} 
+\usepackage[export]{adjustbox}
 
 % The default setting of LaTeX is to indent new paragraphs. This is useful for articles. But not really nice for homework problem sets. The following command sets the indent to 0.
 \usepackage{setspace}
@@ -84,8 +85,8 @@ Concordia \\ Winter 2021 \\ A. Krzyzak \\
 \begin{enumerate}
 
   \item {
-    \includegraphics[width=0.5\textwidth]{hsumsingle.png}
-    \includegraphics[width=0.5\textwidth]{hsumdouble.png}
+    \includegraphics[width=0.5\textwidth, valign=t]{hsumsingle.png}
+    \includegraphics[width=0.5\textwidth, valign=t]{hsumdouble.png}
 
     Figures 1 and 2 show the behaviour of the harmonic sum for various values of N. Note that the N values are plotted on a log scale. In both plots we see that the sum continues to grow as N increases.
 
@@ -95,14 +96,14 @@ Concordia \\ Winter 2021 \\ A. Krzyzak \\
     The sum of a geometric series with constant ratio \(r\) less than 1 sum can be calculated using the formula\cite{geoseries}
     \[ \sum_{k=1}^{N} r^k = \frac{r(1-r^N)}{1-r} \]
     Our series has \(r = \frac{1}{3}\), so the sum is
-    \[ \frac{\frac{1}{3}(1-(\frac{1}{3})^N)}{1-\frac{1}{3}} = \frac{1}{2}(1-\frac{1}{3^N}) \]
+    \[ \frac{\frac{1}{3}(1-(\frac{1}{3})^N)}{1-\frac{1}{3}} = \frac{1}{2} \left( 1-\frac{1}{3^N} \right) \]
     In the limit of large \(N\), the sum of a geometric series with constant ratio less than 1 can be calculated using the formula\cite{geoseries}
     \[ \sum_{k=1}^{\infty} = \frac{r}{1-r} \]
     Which for \(r = \frac{1}{3} \) is \(\frac{1}{2}\).
   }
 
   \item {
-    \includegraphics[width=\textwidth]{q2seq1}
+    \includegraphics[width=\textwidth, valign=t]{q2seq1}
     We see from the above figure that sequence initially rises before settling to a fixed point \(x^*\) after \(k=5\). We find this fixed point by solving
     \[ x = f(x) \]
     where
@@ -120,8 +121,8 @@ Concordia \\ Winter 2021 \\ A. Krzyzak \\
   }
   
   \item {
-    \includegraphics[width=0.5\textwidth]{mperror}
-    \includegraphics[width=0.5\textwidth]{sierror}
+    \includegraphics[width=0.5\textwidth, valign=t]{mperror}
+    \includegraphics[width=0.5\textwidth, valign=t]{sierror}
 
     For the Midpoint Method, the smallest \(M\) for which the error is less than \(10^{-7}\) is \(2^{11}\). This corresponds to 2048 function evaluations.\\
     For Simpson's Method, the smallest \(M\) for which the error is less than \(10^{-7}\) is \(2^{6}\). This corresponds to 65 function evaluations.\\
